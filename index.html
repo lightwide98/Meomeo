@@ -46,14 +46,16 @@
 
 
     h1 {
-      color:#FF5CA4;
-      text-align: center;
-      position: absolute;
-      font-size: larger;
-      font-style: normalnormal;
-      font-family:'Times New Roman', Times, serif;
-      animation: animate 1.3s infinite;
-    }
+    color: #FF5CA4;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer; /* Biến chữ thành clickable */
+    position: relative; /* Hoặc thử bỏ hẳn position */
+    z-index: 10; /* Đảm bảo nó nằm trên các phần tử khác */
+}
+
+    
 
 
     #pinkboard {
@@ -118,7 +120,8 @@
 
 
 <BODY>
-  <h1> Meo Meo <3 </h1>
+<img id="catImage" src="Meo.jpg" alt="Hình mèo" style="display:none; margin-top: 200px; width: 200px; height: auto;">
+  <h1 id="Meo"> Meo Meo <3 </h1>
   <div class="box">
     <canvas id="pinkboard"></canvas>
   </div>
@@ -368,6 +371,13 @@
         render();
       }, 10);
     })(document.getElementById('pinkboard'));
+    document.querySelector("h1").addEventListener("click", function() {
+    var img = document.getElementById("catImage");
+    img.style.display = "block"; // Hiển thị ảnh
+    document.getElementById("pinkboard").style.display = "none"; // Ẩn trái tim
+    document.getElementById("Meo").style.display = "none"; // Ẩn chữ Meo Meo
+});
+   
   </script>
 </BODY>
 
