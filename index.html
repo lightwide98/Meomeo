@@ -121,7 +121,7 @@
 
 <BODY>
 <img id="catImage" src="Meo.jpg" alt="Hình mèo" style="display:none; margin-top: 200px; width: 200px; height: auto;">
-  <h1 id="Meo"> Meo Meo <3 </h1>
+  <h1> Meo Meo <3 </h1>
   <div class="box">
     <canvas id="pinkboard"></canvas>
   </div>
@@ -371,13 +371,12 @@
         render();
       }, 10);
     })(document.getElementById('pinkboard'));
+
     document.querySelector("h1").addEventListener("click", function() {
     var img = document.getElementById("catImage");
     img.style.display = "block"; // Hiển thị ảnh
-    document.getElementById("pinkboard").style.display = "none"; // Ẩn trái tim
-    document.getElementById("Meo").style.display = "none"; // Ẩn chữ Meo Meo
 });
-   
+    
   </script>
 </BODY>
 
